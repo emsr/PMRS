@@ -1,0 +1,353 @@
+<ui version="4.0" >
+ <class>AnalysisInputDialog</class>
+ <widget class="QDialog" name="AnalysisInputDialog" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>488</width>
+    <height>389</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Analysis Input</string>
+  </property>
+  <property name="modal" >
+   <bool>true</bool>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2" >
+   <item row="0" column="0" >
+    <widget class="QGroupBox" name="groupBoxTopoInputs" >
+     <property name="title" >
+      <string>Topographic Extraction Inputs</string>
+     </property>
+     <layout class="QFormLayout" name="formLayout" >
+      <item row="0" column="0" >
+       <widget class="QLabel" name="labelInterpMethod" >
+        <property name="text" >
+         <string>Interpolation Method</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" >
+       <widget class="QComboBox" name="comboBoxInterpMethod" >
+        <property name="currentIndex" >
+         <number>2</number>
+        </property>
+        <item>
+         <property name="text" >
+          <string>Nearest</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Highest</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Four-Point</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="1" column="0" >
+       <widget class="QLabel" name="labelProfileSpacing" >
+        <property name="text" >
+         <string>Profile Spacing</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" >
+       <widget class="QDoubleSpinBox" name="doubleSpinBoxProfileSpacing" >
+        <property name="specialValueText" >
+         <string>Use Topo File Spacing</string>
+        </property>
+        <property name="suffix" >
+         <string> seconds</string>
+        </property>
+        <property name="decimals" >
+         <number>0</number>
+        </property>
+        <property name="minimum" >
+         <double>3.000000000000000</double>
+        </property>
+        <property name="maximum" >
+         <double>30.000000000000000</double>
+        </property>
+        <property name="singleStep" >
+         <double>3.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" >
+       <widget class="QLabel" name="labelDatumCode" >
+        <property name="text" >
+         <string>Datum Code</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" >
+       <widget class="QComboBox" name="comboBoxDatumCode" >
+        <item>
+         <property name="text" >
+          <string>World Geodetic System 1984</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>North American Datum NAD 27</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>European</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Tokyo</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Great Britain</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Maui (Old Hawaiian)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Oahu (Old Hawaiian)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Kauai (Old Hawaiian)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Kwajalein Atoll (Wake-Eniwetok)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Wake Island (Wake-Eniwetok)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Eniwetok Atoll (Wake-Eniwetok)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Wake Island Astro 1952</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Guam 1963</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0" >
+    <widget class="QGroupBox" name="groupBoxTerrainInputs" >
+     <property name="title" >
+      <string>Terrain Propagation Inputs</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout" >
+      <item row="0" column="0" >
+       <widget class="QLabel" name="labelHumidity" >
+        <property name="text" >
+         <string>Humidity</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" >
+       <widget class="QDoubleSpinBox" name="doubleSpinBoxHumidity" >
+        <property name="suffix" >
+         <string> g/m3</string>
+        </property>
+        <property name="maximum" >
+         <double>1000.000000000000000</double>
+        </property>
+        <property name="value" >
+         <double>10.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" >
+       <widget class="QLabel" name="labelRefractivity" >
+        <property name="text" >
+         <string>Sea-Level Atmospheric Refractivity</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" >
+       <widget class="QDoubleSpinBox" name="doubleSpinBoxRefractivity" >
+        <property name="suffix" >
+         <string> M-units</string>
+        </property>
+        <property name="minimum" >
+         <double>-1000.000000000000000</double>
+        </property>
+        <property name="maximum" >
+         <double>10000.000000000000000</double>
+        </property>
+        <property name="value" >
+         <double>301.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" >
+       <widget class="QLabel" name="labelGroundType" >
+        <property name="text" >
+         <string>CCIR Ground Type</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" >
+       <widget class="QComboBox" name="comboBoxGroundType" >
+        <item>
+         <property name="text" >
+          <string>None</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Sea Water (20 Degrees C)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Medium Dry Ground</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Very Dry Ground</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Pure Water (Not Used)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Ice (Fresh Water, -1 Degree C)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>Ice (Fresh Water, -10 Degree C)</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="3" column="0" >
+       <widget class="QLabel" name="labelPermittivity" >
+        <property name="text" >
+         <string>Relative Permittivity of Earth Surface</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1" >
+       <widget class="QDoubleSpinBox" name="doubleSpinBoxPermittivity" >
+        <property name="decimals" >
+         <number>6</number>
+        </property>
+        <property name="maximum" >
+         <double>1000.000000000000000</double>
+        </property>
+        <property name="value" >
+         <double>15.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0" >
+       <widget class="QLabel" name="labelConductivity" >
+        <property name="text" >
+         <string>Conductivity of Earth Surface</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1" >
+       <widget class="QDoubleSpinBox" name="doubleSpinBoxConductivity" >
+        <property name="suffix" >
+         <string> S/m</string>
+        </property>
+        <property name="decimals" >
+         <number>6</number>
+        </property>
+        <property name="maximum" >
+         <double>10.000000000000000</double>
+        </property>
+        <property name="singleStep" >
+         <double>0.010000000000000</double>
+        </property>
+        <property name="value" >
+         <double>0.030000000000000</double>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="0" >
+    <widget class="QDialogButtonBox" name="buttonBox" >
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons" >
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>AnalysisInputDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>AnalysisInputDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

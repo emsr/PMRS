@@ -1,0 +1,239 @@
+<ui version="4.0" >
+ <class>SqlQueryDialog</class>
+ <widget class="QDialog" name="SqlQueryDialog" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>530</width>
+    <height>392</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Query Select Criteria</string>
+  </property>
+  <property name="modal" >
+   <bool>true</bool>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" >
+   <item row="0" column="0" >
+    <widget class="QLabel" name="labelLocation" >
+     <property name="text" >
+      <string>Location</string>
+     </property>
+     <property name="buddy" >
+      <cstring>listViewLocation</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1" colspan="3" >
+    <widget class="QListView" name="listViewLocation" >
+     <property name="selectionMode" >
+      <enum>QAbstractItemView::ExtendedSelection</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" >
+    <widget class="QLabel" name="labelFrequency" >
+     <property name="text" >
+      <string>Frequency</string>
+     </property>
+     <property name="buddy" >
+      <cstring>comboBoxFrequency</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1" >
+    <widget class="SqlSelectOperator" name="comboBoxFrequency" />
+   </item>
+   <item row="1" column="2" >
+    <widget class="QDoubleSpinBox" name="doubleSpinBoxFreqBegin" >
+     <property name="maximum" >
+      <double>1000000.000000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="3" >
+    <widget class="QDoubleSpinBox" name="doubleSpinBoxFreqEnd" >
+     <property name="maximum" >
+      <double>1000000.000000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" >
+    <widget class="QLabel" name="labelLinkDist" >
+     <property name="text" >
+      <string>Link Distance</string>
+     </property>
+     <property name="buddy" >
+      <cstring>comboBoxLinkDist</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1" >
+    <widget class="SqlSelectOperator" name="comboBoxLinkDist" />
+   </item>
+   <item row="2" column="2" >
+    <widget class="QDoubleSpinBox" name="doubleSpinBoxLinkDistBegin" >
+     <property name="maximum" >
+      <double>1000.000000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="3" >
+    <widget class="QDoubleSpinBox" name="doubleSpinBoxLinkDistEnd" >
+     <property name="maximum" >
+      <double>1000.000000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" >
+    <widget class="QLabel" name="labelTxAntHt" >
+     <property name="text" >
+      <string>Tx Antenna Height</string>
+     </property>
+     <property name="buddy" >
+      <cstring>comboBoxTxAntHt</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1" >
+    <widget class="SqlSelectOperator" name="comboBoxTxAntHt" />
+   </item>
+   <item row="3" column="2" >
+    <widget class="QDoubleSpinBox" name="doubleSpinBoxTxAntHtBegin" >
+     <property name="maximum" >
+      <double>40000.000000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="3" >
+    <widget class="QDoubleSpinBox" name="doubleSpinBoxTxAntHtEnd" >
+     <property name="maximum" >
+      <double>40000.000000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" >
+    <widget class="QLabel" name="labelRxAntHt" >
+     <property name="text" >
+      <string>Rx Antenna Height</string>
+     </property>
+     <property name="buddy" >
+      <cstring>comboBoxRxAntHt</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1" >
+    <widget class="SqlSelectOperator" name="comboBoxRxAntHt" />
+   </item>
+   <item row="4" column="2" >
+    <widget class="QDoubleSpinBox" name="doubleSpinBoxRxAntHtBegin" >
+     <property name="maximum" >
+      <double>40000.000000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="3" >
+    <widget class="QDoubleSpinBox" name="doubleSpinBoxRxAntHtEnd" >
+     <property name="maximum" >
+      <double>40000.000000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0" >
+    <widget class="QLabel" name="labelPolar" >
+     <property name="text" >
+      <string>Polarization</string>
+     </property>
+     <property name="buddy" >
+      <cstring>comboBoxPolar</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1" >
+    <widget class="QComboBox" name="comboBoxPolar" >
+     <item>
+      <property name="text" >
+       <string>Like Polarization</string>
+      </property>
+     </item>
+     <item>
+      <property name="text" >
+       <string>Cross Polarization</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="6" column="0" colspan="4" >
+    <widget class="QDialogButtonBox" name="buttonBox" >
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons" >
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>SqlSelectOperator</class>
+   <extends>QComboBox</extends>
+   <header>SqlSelectOperator.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>listViewLocation</tabstop>
+  <tabstop>comboBoxFrequency</tabstop>
+  <tabstop>doubleSpinBoxFreqBegin</tabstop>
+  <tabstop>doubleSpinBoxFreqEnd</tabstop>
+  <tabstop>comboBoxLinkDist</tabstop>
+  <tabstop>doubleSpinBoxLinkDistBegin</tabstop>
+  <tabstop>doubleSpinBoxLinkDistEnd</tabstop>
+  <tabstop>comboBoxTxAntHt</tabstop>
+  <tabstop>doubleSpinBoxTxAntHtBegin</tabstop>
+  <tabstop>doubleSpinBoxTxAntHtEnd</tabstop>
+  <tabstop>comboBoxRxAntHt</tabstop>
+  <tabstop>doubleSpinBoxRxAntHtBegin</tabstop>
+  <tabstop>doubleSpinBoxRxAntHtEnd</tabstop>
+  <tabstop>comboBoxPolar</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>SqlQueryDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>SqlQueryDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

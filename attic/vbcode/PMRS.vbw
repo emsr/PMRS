@@ -1,0 +1,11 @@
+frmSQLQuery = 115, 71, 632, 515, , 93, 29, 610, 473, C
+frmQueryResult = 66, 66, 583, 510, C, 22, 22, 539, 466, C
+Declares = 110, 110, 627, 554, C
+frmTIREMAnalysis = 154, 154, 671, 598, C, 88, 88, 605, 532, C
+frmStatusBar = 176, 176, 695, 549, C, 88, 88, 605, 532, C
+Tirem_Declares = 110, 110, 627, 554, C
+Fortran_DLL_Declares = 110, 110, 627, 554, C
+frmPropResult = 44, 44, 561, 488, C, 132, 132, 649, 576, C
+frmProfile = 5, -12, 729, 432, C, 3, -3, 715, 441, C
+Module2 = 132, 132, 649, 576, C
+WOTRET202_Declares = 176, 176, 695, 549, C
