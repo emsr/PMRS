@@ -43,6 +43,7 @@ create table profile_point (
     data_set_id        integer,
     datum_id           integer,
     profile_input_id   integer,
+    profile_point_id   integer,
     distance           double precision,
     height             double precision
 );
